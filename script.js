@@ -1,9 +1,9 @@
 const milestones = [
-    { title: "First Call for Abstracts", date: new Date("May 26, 2025 00:00:00") },
-    { title: "Deadline for Abstract Submission", date: new Date("July 14, 2025 23:59:59") },
-    { title: "Acceptance Notification", date: new Date("September 15, 2025 23:59:59") },
-    { title: "Registrations Open", date: new Date("October 30, 2025 23:59:59") },
-    { title: "Conference Date", date: new Date("November 27, 2025 00:00:00") }
+    { title: "First Call for Abstracts", date: new Date("June 12, 2026 00:00:00") },
+    { title: "Deadline for Abstract Submission", date: new Date("July 12, 2026 23:59:59") },
+    { title: "Acceptance Notification", date: new Date("October 15, 2026 00:00:00") },
+    { title: "Registrations Open", date: new Date("October 30, 2026 00:00:00") },
+    { title: "Conference Date", date: new Date("November 26, 2026 00:00:00") }
   ];
 
   let currentIndex = 0;
