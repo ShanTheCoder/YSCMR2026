@@ -681,4 +681,11 @@ footer {
   display: block;
 }
 
+#comittee .comittee-wrapper {
+    justify-content: center;
+}
+
+#comittee .comittee-box {
+    width: 250px;
+}
 
