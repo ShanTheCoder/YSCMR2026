@@ -32,7 +32,7 @@ function updateSubmissionButton() {
     btn.textContent = "Submit the Abstract";
     btn.href = "https://cmt3.research.microsoft.com/YSCMR2026";
   }
-  else if (now >= DATES.acceptanceNotification) {
+  else if (now >= DATES.camready) {
     btn.style.display = "inline-block";
     btn.textContent = "Submit the Poster";
     btn.href = "https://cmt3.research.microsoft.com/YSCMR2026";
