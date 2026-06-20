@@ -416,13 +416,34 @@ nav{
 
 
 
-.guidlinebutton{
-  background-color: #3c096c;
-  text-decoration: none;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
+.guidlinebutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 300px;
+    height: 35px;
+
+    margin: 0 auto 5px auto; /* 5px bottom gap */
+
+    background-color: #3c096c;
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+
+    box-sizing: border-box;
+    padding: 0;
+
+    border-radius: 10px;
+    font-weight: 600;
+
+    overflow: hidden;
 }
+
+
+
+
 
 
 
@@ -630,7 +651,12 @@ footer {
   text-align: center;
   padding: 15px 0;
   font-size: 0.9em;
+
+
 }
+
+
+
 
 
 .track {
@@ -686,6 +712,39 @@ footer {
     padding: 0 10px;
     margin-bottom: 10px;
 }
+
+
+
+
+
+
+.contact-list {
+    list-style: none !important;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.contact-list li {
+    list-style: none !important;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.contact-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 8px;
+    height: 8px;
+
+    background: #004080;
+    border-radius: 50%;
+}
+
 
 /*.comittee-wrapper{
     display: grid;
