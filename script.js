@@ -32,7 +32,7 @@ function updateSubmissionButton() {
     btn.textContent = "Submit the Abstract";
     btn.href = "https://cmt3.research.microsoft.com/YSCMR2026";
   }
-  else if (now >= DATES.camready) {
+  else if (now <= DATES.camready) {
     btn.style.display = "inline-block";
     btn.textContent = "Submit the Poster";
     btn.href = "https://cmt3.research.microsoft.com/YSCMR2026";
@@ -47,15 +47,24 @@ function updateAbstractButton() {
   const now = new Date();
 
   const btn = document.getElementById("abstract-btn");
+  const pbtn = document.getElementById("poster-btn");
 
-  if (!btn) return;
-
-  if (now > DATES.abstractDeadline) {
+  // Abstract button
+  if (btn && now > DATES.abstractDeadline) {
     btn.textContent = "Deadline Reached";
     btn.href = "";
     btn.style.backgroundColor = "red";
     btn.style.pointerEvents = "none";
     btn.style.cursor = "not-allowed";
+  }
+
+  // Poster button
+  if (pbtn && now > DATES.camready) {
+    pbtn.textContent = "Deadline Reached";
+    pbtn.href = "";
+    pbtn.style.backgroundColor = "red";
+    pbtn.style.pointerEvents = "none";
+    pbtn.style.cursor = "not-allowed";
   }
 }
 
@@ -82,7 +91,8 @@ function updateCountdown() {
     } else {
 
       document.getElementById("countdown-title").innerText =
-        `The event (${milestones[currentIndex].title}) has started.`;
+        /*`The (${milestones[currentIndex].title}) has started.`;*/
+        `The Conference has started.`;
 
       document.getElementById("countdown").style.display = "none";
 
