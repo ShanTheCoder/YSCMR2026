@@ -47,10 +47,20 @@ function updateAbstractButton() {
   const now = new Date();
 
   const btn = document.getElementById("abstract-btn");
-  const pbtn = document.getElementById("poster-btn");
+  
+
 
   // Abstract button
-  if (btn && now > DATES.abstractDeadline) {
+
+  if (btn && now < DATES.firstCall) {
+    btn.textContent = "Await!";
+    btn.href = "";
+    btn.style.backgroundColor = "green";
+    btn.style.pointerEvents = "none";
+    btn.style.cursor = "not-allowed";
+  }
+
+  else if (btn && now > DATES.abstractDeadline) {
     btn.textContent = "Deadline Reached";
     btn.href = "";
     btn.style.backgroundColor = "red";
@@ -58,14 +68,40 @@ function updateAbstractButton() {
     btn.style.cursor = "not-allowed";
   }
 
-  // Poster button
-  if (pbtn && now > DATES.camready) {
-    pbtn.textContent = "Deadline Reached";
-    pbtn.href = "";
-    pbtn.style.backgroundColor = "red";
-    pbtn.style.pointerEvents = "none";
-    pbtn.style.cursor = "not-allowed";
+  function disableButton(btn, text, color) {
+  if (!btn) return;
+
+  btn.textContent = text;
+  btn.href = "";
+  btn.style.backgroundColor = color;
+  btn.style.pointerEvents = "none";
+  btn.style.cursor = "not-allowed";
+}
+
+  
+  const posterButtons = [
+  "poster-btn",
+  "camreadyguidlines",
+  "camreadytemplate",
+  "postemplate"
+  
+];
+
+posterButtons.forEach(id => {
+  const btn = document.getElementById(id);
+
+  if (now < DATES.acceptanceNotification) {
+    disableButton(btn, "Await!", "green");
   }
+  else if (now > DATES.camready) {
+    disableButton(btn, "Deadline Reached", "red");
+  }
+});
+
+
+
+
+
 }
 
 
