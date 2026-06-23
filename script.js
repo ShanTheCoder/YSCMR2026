@@ -79,24 +79,43 @@ function updateAbstractButton() {
 }
 
   
-  const posterButtons = [
-  "poster-btn",
+const posterBtn = document.getElementById("poster-btn");
+
+const otherButtons = [
   "camreadyguidlines",
   "camreadytemplate",
   "postemplate"
-  
 ];
 
-posterButtons.forEach(id => {
-  const btn = document.getElementById(id);
+if (now < DATES.acceptanceNotification) {
 
-  if (now < DATES.acceptanceNotification) {
-    disableButton(btn, "Await!", "green");
-  }
-  else if (now > DATES.camready) {
-    disableButton(btn, "Deadline Reached", "red");
-  }
-});
+  // First button visible
+  disableButton(posterBtn, "Await!", "green");
+  posterBtn.style.display = "flex";
+
+  // Other buttons hidden
+  otherButtons.forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) btn.style.display = "none";
+  });
+
+}
+else if (now > DATES.camready) {
+
+  // All buttons visible and disabled
+  [posterBtn, ...otherButtons.map(id => document.getElementById(id))]
+    .forEach(btn => {
+      disableButton(btn, "Deadline Reached", "red");
+      btn.style.display = "flex";
+    });
+
+    otherButtons.forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) btn.style.display = "none";
+  });
+
+}
+
 
 
 
