@@ -1,6 +1,6 @@
 const DATES = {
   firstCall: new Date("June 22, 2026 00:00:00"),
-  abstractDeadline: new Date("August 10, 2026 23:59:59"),
+  abstractDeadline: new Date("August 03, 2026 23:59:59"),
   acceptanceNotification: new Date("October 01, 2026 00:00:00"),
   camready: new Date("October 15, 2026 23:59:59"),
   registrationsOpen: new Date("October 22, 2026 00:00:00"),
