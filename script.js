@@ -1,9 +1,9 @@
 const DATES = {
   firstCall: new Date("June 22, 2026 00:00:00"),
   abstractDeadline: new Date("August 10, 2026 23:59:59"),
-  acceptanceNotification: new Date("October 01, 2026 00:00:00"),
-  camready: new Date("October 15, 2026 23:59:59"),
-  registrationsOpen: new Date("October 22, 2026 00:00:00"),
+  acceptanceNotification: new Date("October 20, 2026 00:00:00"),
+  camready: new Date("October 30, 2026 23:59:59"),
+  registrationsOpen: new Date("November 01, 2026 00:00:00"),
   posterDate: new Date("November 04, 2026 00:00:00"),
   conferenceDate: new Date("November 26, 2026 00:00:00")
 };
