@@ -35,7 +35,7 @@ function updateSubmissionButton() {
   else if (now <= DATES.camready) {
     btn.style.display = "inline-block";
     btn.textContent = "Submit the Poster";
-    btn.href = "https://cmt3.research.microsoft.com/YSCMR2026";
+    btn.href = "https://docs.google.com/forms/d/e/1FAIpQLSfVF1DgfzZXnVvEG2IwO_Ca-0rR3gQH-FPQEVfWYdbw9h0Dqw/viewform?usp=sharing&ouid=106621181559108811674";
   }
   else {
     btn.style.display = "none";
